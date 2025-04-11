@@ -10,7 +10,7 @@ sudo apt install ros-humble-librealsense2*
 # Install debian realsense2 package
 sudo apt install ros-humble-realsense2-*
 ```
-Launch the node:
+Launch the ROS2 node:
 ```bash
 source /opt/ros/humble/setup.bash 
 ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true pointcloud.enable:=true

@@ -16,5 +16,5 @@ source /opt/ros/humble/setup.bash
 ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true pointcloud.enable:=true
 ```
 <div align="center">
-  <img src="media/rs_rviz.png" width="400">
+  <img src="media/rs_rviz.png" width="600">
 </div>

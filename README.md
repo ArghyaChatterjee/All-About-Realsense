@@ -81,7 +81,7 @@ data:
 - 0
 - '...'
 ```
-Echo ``:
+Echo `/camera/camera/depth/image_rect_raw`:
 ```
 arghya@arghya:~$ ros2 topic echo /camera/camera/depth/image_rect_raw 
 header:
@@ -183,7 +183,120 @@ data:
 - 11
 - '...'
 ```
-Echo 
+Echo ``:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/depth/color/points
+header:
+  stamp:
+    sec: 1744741203
+    nanosec: 965497070
+  frame_id: camera_depth_optical_frame
+height: 1
+width: 246546
+fields:
+- name: x
+  offset: 0
+  datatype: 7
+  count: 1
+- name: y
+  offset: 4
+  datatype: 7
+  count: 1
+- name: z
+  offset: 8
+  datatype: 7
+  count: 1
+- name: rgb
+  offset: 16
+  datatype: 7
+  count: 1
+is_bigendian: false
+point_step: 20
+row_step: 4930920
+data:
+- 5
+- 164
+- 0
+- 192
+- 51
+- 19
+- 201
+- 191
+- 68
+- 139
+- 36
+- 64
+- 0
+- 0
+- 0
+- 0
+- 52
+- 67
+- 107
+- 0
+- 71
+- 133
+- 0
+- 192
+- 84
+- 139
+- 201
+- 191
+- 146
+- 237
+- 36
+- 64
+- 0
+- 0
+- 0
+- 0
+- 48
+- 63
+- 103
+- 0
+- 174
+- 25
+- 0
+- 192
+- 84
+- 139
+- 201
+- 191
+- 146
+- 237
+- 36
+- 64
+- 0
+- 0
+- 0
+- 0
+- 54
+- 66
+- 108
+- 0
+- 0
+- 219
+- 255
+- 191
+- 111
+- 239
+- 201
+- 191
+- 125
+- 63
+- 37
+- 64
+- 0
+- 0
+- 0
+- 0
+- 60
+- 72
+- 114
+- 0
+- '...'
+is_dense: true
+```
 
 
 

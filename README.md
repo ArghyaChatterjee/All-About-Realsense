@@ -20,7 +20,7 @@ ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true a
 </div>
 
 ## ROS2 topics:
-### Intel Realsense D457
+### Intel Realsense D457:
 List all topics:
 ```
 arghya@arghya:~$ ros2 topic list
@@ -531,6 +531,225 @@ roi:
   height: 0
   width: 0
   do_rectify: false
+```
+Echo `/camera/camera/color/metadata`:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/color/metadata 
+header:
+  stamp:
+    sec: 1744742180
+    nanosec: 399325928
+  frame_id: camera_color_optical_frame
+json_data: '{"frame_number":24366,"clock_domain":"global_time","frame_timestamp":1744742180399.325928,"frame_counter":24366,"hw_timestamp":1...'
+```
+Echo `/camera/camera/depth/metadata`:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/depth/metadata
+header:
+  stamp:
+    sec: 1744742102
+    nanosec: 4334717
+  frame_id: camera_depth_optical_frame
+json_data: '{"frame_number":23179,"clock_domain":"global_time","frame_timestamp":1744742102004.208984,"frame_counter":23179,"hw_timestamp":1...'
+```
+Echo `/camera/camera/extrinsics/depth_to_color`:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/extrinsics/depth_to_color
+rotation:
+- 0.9999989867210388
+- 0.0011255593271926045
+- -0.0009012135560624301
+- -0.0011257760925218463
+- 0.9999993443489075
+- -0.0002400263911113143
+- 0.0009009428322315216
+- 0.00024104070325847715
+- 0.9999995827674866
+translation:
+- -0.05916818976402283
+- -0.0001085121402866207
+- 0.00032190384808927774
+```
+Echo `/camera/camera/extrinsics/depth_to_depth`:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/extrinsics/depth_to_depth 
+rotation:
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+translation:
+- 0.0
+- 0.0
+- 0.0
+---
+```
+Echo `/camera/camera/rgbd`:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/rgbd
+header:
+  stamp:
+    sec: 1744742365
+    nanosec: 760612305
+  frame_id: camera_rgbd_optical_frame
+rgb_camera_info:
+  header:
+    stamp:
+      sec: 1744742365
+      nanosec: 760612305
+    frame_id: camera_color_optical_frame
+  height: 480
+  width: 640
+  distortion_model: plumb_bob
+  d:
+  - -0.05422300472855568
+  - 0.062016744166612625
+  - 0.00011767349496949464
+  - 0.0008119725971482694
+  - -0.01983201690018177
+  k:
+  - 386.45025634765625
+  - 0.0
+  - 324.7872314453125
+  - 0.0
+  - 386.0099792480469
+  - 241.43978881835938
+  - 0.0
+  - 0.0
+  - 1.0
+  r:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  p:
+  - 386.45025634765625
+  - 0.0
+  - 324.7872314453125
+  - 0.0
+  - 0.0
+  - 386.0099792480469
+  - 241.43978881835938
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+  binning_x: 0
+  binning_y: 0
+  roi:
+    x_offset: 0
+    y_offset: 0
+    height: 0
+    width: 0
+    do_rectify: false
+depth_camera_info:
+  header:
+    stamp:
+      sec: 1744742365
+      nanosec: 760612305
+    frame_id: camera_depth_optical_frame
+  height: 480
+  width: 640
+  distortion_model: plumb_bob
+  d:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  k:
+  - 392.40521240234375
+  - 0.0
+  - 324.7828674316406
+  - 0.0
+  - 392.40521240234375
+  - 239.76222229003906
+  - 0.0
+  - 0.0
+  - 1.0
+  r:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  p:
+  - 392.40521240234375
+  - 0.0
+  - 324.7828674316406
+  - 0.0
+  - 0.0
+  - 392.40521240234375
+  - 239.76222229003906
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+  binning_x: 0
+  binning_y: 0
+  roi:
+    x_offset: 0
+    y_offset: 0
+    height: 0
+    width: 0
+    do_rectify: false
+rgb:
+  header:
+    stamp:
+      sec: 1744742365
+      nanosec: 760612305
+    frame_id: camera_color_optical_frame
+  height: 480
+  width: 640
+  encoding: rgb8
+  is_bigendian: 0
+  step: 1920
+  data:
+  - 4
+  - 15
+  - 11
+  - 4
+  - 15
+  - 11
+  - 5
+  - 13
+  - 10
+  - 5
+  - '...'
+depth:
+  header:
+    stamp:
+      sec: 1744742365
+      nanosec: 760612305
+    frame_id: camera_depth_optical_frame
+  height: 480
+  width: 640
+  encoding: 16UC1
+  is_bigendian: 0
+  step: 1280
+  data:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - '...'
 ```
 Echo `/tf_static`:
 ```

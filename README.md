@@ -183,7 +183,7 @@ data:
 - 11
 - '...'
 ```
-Echo ``:
+Echo `/camera/camera/depth/color/points`:
 ```
 arghya@arghya:~$ ros2 topic echo /camera/camera/depth/color/points
 header:
@@ -296,6 +296,64 @@ data:
 - 0
 - '...'
 is_dense: true
+```
+Echo `/camera/camera/color/image_raw`:
+```
+arghya@arghya:~$ ros2 topic echo /camera/camera/color/image_raw 
+header:
+  stamp:
+    sec: 1744740700
+    nanosec: 679577393
+  frame_id: camera_color_optical_frame
+height: 480
+width: 640
+encoding: rgb8
+is_bigendian: 0
+step: 1920
+data:
+- 122
+- 86
+- 76
+- 117
+- 81
+- 71
+- 117
+- 81
+- 71
+- 118
+- 82
+- 72
+- 124
+- 86
+- 75
+- 125
+- 87
+- 76
+- 133
+- 92
+- 82
+- 135
+- 94
+- 84
+- 134
+- 92
+- 80
+- 132
+- 90
+- 78
+- 136
+- 89
+- 78
+- 137
+- 90
+- 79
+- 131
+- 82
+- 72
+- 125
+- 76
+- 66
+- '...'
 ```
 
 

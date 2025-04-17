@@ -10,6 +10,14 @@ sudo apt install ros-humble-librealsense2*
 # Install debian realsense2 package
 sudo apt install ros-humble-realsense2-*
 ```
+Launch the realsense viewer:
+```bash
+realsense-viewer
+```
+<div align="center">
+  <img src="media/rs_viz.png" width="600">
+</div>
+
 Launch the ROS2 node:
 ```bash
 source /opt/ros/humble/setup.bash 

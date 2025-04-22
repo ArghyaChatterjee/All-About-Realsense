@@ -18,13 +18,51 @@ sudo apt update && sudo apt install -y \
   libglu1-mesa-dev \
   libopencv-dev \
   libcurl4-openssl-dev \
-  librealsense2-dev \
-  ros-humble-cv-bridge \
   python3-pip \
   python3-bloom \
   dh-make \
   debhelper \
   fakeroot
+```
+
+Register the server's public key:
+```bash
+sudo mkdir -p /etc/apt/keyrings
+curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | sudo tee /etc/apt/keyrings/librealsense.pgp > /dev/null
+```
+Make sure apt HTTPS support is installed:
+```
+sudo apt-get install apt-transport-https
+```bash
+Add the server to the list of repositories:
+```bash
+echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
+sudo tee /etc/apt/sources.list.d/librealsense.list
+sudo apt-get update
+```
+Install the libraries (see section below if upgrading packages):
+```bash
+sudo apt-get install librealsense2-dkms
+sudo apt-get install librealsense2-utils
+```
+The above two lines will deploy librealsense2 udev rules, build and activate kernel modules, runtime library and executable demos and tools.
+
+Optionally install the developer and debug packages:
+```
+sudo apt-get install librealsense2-dev
+sudo apt-get install librealsense2-dbg
+```
+With dev package installed, you can compile an application with librealsense using g++ -std=c++11 filename.cpp -lrealsense2 or an IDE of your choice.
+
+Reconnect the Intel RealSense depth camera and run: 
+```
+realsense-viewer 
+```
+This will verify the installation.
+
+Verify that the kernel is updated :
+```bash
+modinfo uvcvideo | grep "version:" should include realsense string
 ```
 ## Installation from Source
 Install the libraries from source (specific version):

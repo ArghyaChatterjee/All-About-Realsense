@@ -91,6 +91,7 @@ sudo make install
 Run Intel Realsense permissions script from librealsense2 root directory:
 ```bash
 cd librealsense
+sudo apt install v4l-utils
 ./scripts/setup_udev_rules.sh
 ```
 Optional: You can always remove permissions by running: 

@@ -70,6 +70,10 @@ modinfo uvcvideo | grep "version:"
 ```
 Should include realsense string.
 
+<div align="center">
+  <img src="media/rs_depth.png" width="600">
+</div>
+
 ## Installation from Source
 
 Follow this guideline from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).

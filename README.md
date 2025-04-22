@@ -2,7 +2,7 @@
 
 This is a repository for all about realsense camera series (D435, D435i, D455 and D457) and realsense SDK version 2.53.1 and 2.55.1.
 
-## Binary Libraries Installation
+## Installation from Binaries
 Install the libraries from binaries:
 ```
 sudo apt update && sudo apt install -y \

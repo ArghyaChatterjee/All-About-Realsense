@@ -4,7 +4,7 @@ This is a repository for all about realsense camera series (D435, D435i, D455 an
 
 Install this irrespective of binary or source installation:
 
-```
+```bash
 sudo apt update && sudo apt install -y \
   git \
   cmake \
@@ -35,9 +35,9 @@ sudo mkdir -p /etc/apt/keyrings
 curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | sudo tee /etc/apt/keyrings/librealsense.pgp > /dev/null
 ```
 Make sure apt HTTPS support is installed:
-```
-sudo apt-get install apt-transport-https
 ```bash
+sudo apt-get install apt-transport-https
+```
 Add the server to the list of repositories:
 ```bash
 echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
@@ -74,7 +74,7 @@ Should include realsense string.
 
 Follow this guideline from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).
 
-Install the libraries from source (specific version):
+Install specific version of the libraries from source:
 ```
 cd ~
 git clone https://github.com/IntelRealSense/librealsense.git -b v2.55.1

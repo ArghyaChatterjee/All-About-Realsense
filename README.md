@@ -1,8 +1,44 @@
 # Realsense Tutorial
 
-This is a repository for all about realsense camera series (D435, D435i, D455 and D457).
+This is a repository for all about realsense camera series (D435, D435i, D455 and D457) and realsense SDK version 2.53.1 and 2.55.1.
 
+## Binary Libraries Installation
 Install the libraries:
+```
+sudo apt update && sudo apt install -y \
+  git \
+  cmake \
+  libssl-dev \
+  libusb-1.0-0-dev \
+  libudev-dev \
+  pkg-config \
+  libgtk-3-dev \
+  libglfw3-dev \
+  libgl1-mesa-dev \
+  libglu1-mesa-dev \
+  libopencv-dev \
+  libcurl4-openssl-dev \
+  librealsense2-dev \
+  ros-humble-cv-bridge \
+  python3-pip \
+  python3-bloom \
+  dh-make \
+  debhelper \
+  fakeroot
+```
+## Installation from Source
+Install the libraries from source (specific version):
+```
+cd ~
+git clone https://github.com/IntelRealSense/librealsense.git -b v2.55.1
+cd librealsense
+
+mkdir build && cd build
+cmake .. -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=false
+make -j$(nproc)
+sudo make install
+```
+## ROS libraries Installation:
 ```bash
 # Install librealsense2
 sudo apt install ros-humble-librealsense2*

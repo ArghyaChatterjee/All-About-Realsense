@@ -2,8 +2,8 @@
 
 This is a repository for all about realsense camera series (D435, D435i, D455 and D457) and realsense SDK version 2.53.1 (Java Support) and 2.55.1.
 
-## Installation from Binaries
-Install the libraries from binaries:
+Install this irrespective of binary or source installation:
+
 ```
 sudo apt update && sudo apt install -y \
   git \
@@ -24,6 +24,9 @@ sudo apt update && sudo apt install -y \
   debhelper \
   fakeroot
 ```
+
+## Installation from Binaries
+
 Follow this guideline to install from binaries from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md).
 
 Register the server's public key:

@@ -24,6 +24,7 @@ sudo apt update && sudo apt install -y \
   debhelper \
   fakeroot
 ```
+Follow this guideline to install from binaries from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md).
 
 Register the server's public key:
 ```bash
@@ -62,15 +63,19 @@ This will verify the installation.
 
 Verify that the kernel is updated :
 ```bash
-modinfo uvcvideo | grep "version:" should include realsense string
+modinfo uvcvideo | grep "version:" 
 ```
+Should include realsense string.
+
 ## Installation from Source
+
+Follow this guideline from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).
+
 Install the libraries from source (specific version):
 ```
 cd ~
 git clone https://github.com/IntelRealSense/librealsense.git -b v2.55.1
 cd librealsense
-
 mkdir build && cd build
 cmake .. -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=false
 make -j$(nproc)

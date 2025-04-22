@@ -84,6 +84,15 @@ cmake .. -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=false
 make -j$(nproc)
 sudo make install
 ```
+Run Intel Realsense permissions script from librealsense2 root directory:
+```bash
+cd librealsense
+./scripts/setup_udev_rules.sh
+```
+Optional: You can always remove permissions by running: 
+```
+./scripts/setup_udev_rules.sh --uninstall
+```
 ## ROS libraries Installation:
 ```bash
 # Install librealsense2

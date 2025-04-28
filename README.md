@@ -84,7 +84,7 @@ cd ~
 git clone https://github.com/IntelRealSense/librealsense.git -b v2.55.1
 cd librealsense
 mkdir build && cd build
-cmake .. -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=false
+cmake .. -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true
 make -j$(nproc)
 sudo make install
 ```

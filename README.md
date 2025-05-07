@@ -98,6 +98,11 @@ Optional: You can always remove permissions by running:
 ```
 ./scripts/setup_udev_rules.sh --uninstall
 ```
+
+## Python libraries Installation:
+```bash
+pip install pyrealsense2
+```
 ## ROS libraries Installation:
 ```bash
 # Install librealsense2

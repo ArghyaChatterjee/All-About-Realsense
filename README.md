@@ -74,6 +74,34 @@ Should include realsense string.
   <img src="media/rs_depth.png" width="600">
 </div>
 
+## Installation inside a docker
+Follow this guideline from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).
+
+Install specific version of the libraries from source:
+```
+apt update
+apt install git
+cd ~
+git clone https://github.com/IntelRealSense/librealsense.git -b v2.55.1
+cd librealsense
+mkdir build && cd build
+cmake .. -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true
+make -j$(nproc)
+sudo make install
+```
+Run Intel Realsense permissions script from librealsense2 root directory:
+```bash
+cd librealsense
+sudo apt install v4l-utils
+./scripts/setup_udev_rules.sh
+```
+Installing ros libraries:
+```
+apt install udev
+apt install ros-humble-librealsense2*
+apt install ros-humble-realsense2-*
+```
+
 ## Installation from Source
 
 Follow this guideline from the official [website](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).
@@ -929,7 +957,7 @@ transforms:
       z: -0.5
       w: 0.5000000000000001
 ```
-
+## 
 
 
 

@@ -92,12 +92,11 @@ sudo make install
 Run Intel Realsense permissions script from librealsense2 root directory:
 ```bash
 cd librealsense
-sudo apt install v4l-utils
+sudo apt install v4l-utils udev
 ./scripts/setup_udev_rules.sh
 ```
 Installing ros libraries:
 ```
-apt install udev
 apt install ros-humble-librealsense2*
 apt install ros-humble-realsense2-*
 ```
